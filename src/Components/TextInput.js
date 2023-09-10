@@ -7,9 +7,9 @@ export const TextInput = () => {
             <input className={`border-gray-300 border-2 rounded w-full text-center`}
                 type="text" name="textInput" id="textInput"
                 placeholder='введите текст, он отобразится ниже'
-                onChange={(e) => setTextInputValue(e.target.value)} />
-
-            <label htmlFor="textInput" className=''>
+                onChange={(e) => setTextInputValue(e.target.value)}
+            />
+            <label htmlFor="textInput" className='min-h-[25px] break-words'>
                 {textInputValue}
             </label>
 

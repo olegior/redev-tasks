@@ -8,7 +8,7 @@ export const Button = ({ title, cb, color = '0,200,0' }) => {
                     border: `2px solid rgb(${color})`,
                     backgroundColor: `rgba(${color},0.2)`,
                     minWidth: '140px',
-                    maxWidth: '160px',
+                    // maxWidth: '170px',
                     minHeight: '40px'
                 }
             }

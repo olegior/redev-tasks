@@ -32,7 +32,7 @@ code {
   }
 
   .row {
-    @apply flex-row justify-between;
+    @apply flex-row justify-between items-center;
   }
 
   span{
