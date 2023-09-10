@@ -15,8 +15,8 @@ function App() {
   const [listData, setListData] = useState(['компонент', 'List', 'отображает', 'список', 'элементов']);
 
   const handleListValueChange = (e) => {
-    const index = listData.indexOf(e.target.parentElement.dataset.value);
-    setListData([...listData.slice(0, index), '!!!' + listData[index], ...listData.slice(index + 1)])
+    const index = +e.target.dataset.value;
+    setListData(prev => [...prev.slice(0, index), '!!!' + prev[index], ...prev.slice(index + 1)])
   }
   const handleInputKeyDown = (e) => {
     const value = e.target.value.trim();

@@ -27,7 +27,7 @@ export const Counter = ({ buttons = [], row, children }) => {
                 {children}
                 <span>{counter}</span>
             </div>
-            <div className='flex justify-evenly'>
+            <div className='flex justify-evenly flex-wrap gap-2'>
                 {buttons.map(({ title, action }) => <Button title={title} key={title} cb={() => handleButtonClick(action)} />)}
             </div>
         </div>

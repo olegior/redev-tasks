@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Button = ({ title, cb, color = '0,200,0' }) => {
+export const Button = ({ title, cb, color = '0,200,0', datavalue }) => {
     return (
         <button className={`rounded px-5 mx-1 break-words`}
             style={
@@ -12,6 +12,6 @@ export const Button = ({ title, cb, color = '0,200,0' }) => {
                     minHeight: '40px'
                 }
             }
-            onClick={cb}>{title}</button>
+            onClick={cb} data-value={datavalue}>{title}</button>
     )
 }

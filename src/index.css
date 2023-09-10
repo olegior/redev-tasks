@@ -20,7 +20,7 @@ code {
 @layer {
 
   .App {
-    @apply flex flex-row flex-wrap justify-center;
+    @apply flex flex-row flex-wrap justify-center items-start;
   }
 
   .task {
