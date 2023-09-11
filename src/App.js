@@ -16,7 +16,8 @@ function App() {
 
   const handleListValueChange = (e) => {
     const index = +e.target.dataset.value;
-    setListData(prev => [...prev.slice(0, index), '!!!' + prev[index], ...prev.slice(index + 1)])
+    // setListData(prev => [...prev.slice(0, index), '!!!' + prev[index], ...prev.slice(index + 1)])
+    setListData(prev => prev.map((el, i) => i === index ? '!!!' + el : el));
   }
   const handleInputKeyDown = (e) => {
     const value = e.target.value.trim();

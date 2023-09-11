@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Button } from './Button';
+import Fetcher from '../Utils/Fetcher';
 
 export const LifeCycleComponentFunc = () => {
     const [count, setCount] = useState(0);
+    const f = new Fetcher('Функциональный');
     useEffect(() => {
         console.log('функциональный, componentDidMount');
+        f.login();
         return () => console.log('функциональный, componentWillUnmount');
     }, []);
 
