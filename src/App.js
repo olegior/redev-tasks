@@ -10,7 +10,7 @@ import { LifeCycleComponentFunc } from './Components/LifeCycleComponentFunc.js';
 import { List } from './Components/List.js';
 import { useContext, useRef, useState } from 'react';
 import { ThemeSwitcher } from './Components/ThemeSwitcher.js';
-import { Theme } from './Utils/ThemeContext.js';
+import { Theme } from './Components/ThemeContext.js';
 
 function App() {
   const textInput = useRef();

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Theme } from '../Utils/ThemeContext';
+import { Theme } from './ThemeContext';
 
 export const Button = ({ title, cb, color = '#00c800', datavalue }) => {
     const theme = useContext(Theme);
