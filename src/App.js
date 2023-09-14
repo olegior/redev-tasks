@@ -8,7 +8,9 @@ import { ParentComponent } from './Components/ParentComponent.js';
 import LifeCycleComponent from './Components/LifeCycleComponent.js';
 import { LifeCycleComponentFunc } from './Components/LifeCycleComponentFunc.js';
 import { List } from './Components/List.js';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { ThemeSwitcher } from './Components/ThemeSwitcher.js';
+import { Theme } from './Utils/ThemeContext.js';
 
 function App() {
   const textInput = useRef();
@@ -26,26 +28,32 @@ function App() {
       e.target.value = '';
     }
   }
+
+  const theme = useContext(Theme);
   return (
-    <div className="App">
-      <Task title={'#1'}>
+    <div className={`App ${theme.theme}`}>
+      <Task title={'#1 props и state в React'}>
         <Counter buttons={[{ title: '+1', action: 1 }]} row />
         <TextHide />
         <TextInput />
         <ColorfulComponent Component={Button} title='изменить цвет' />
         <ParentComponent />
       </Task>
-      <Task title={'#2'} >
+      <Task title={'#2 LifeCycle в React'} >
         <LifeCycleComponent />
         <LifeCycleComponentFunc />
         <p className='text-center mt-5'>вся инфа выводится в консоль</p>
       </Task>
-      <Task title={'#3'}>
+      <Task title={'#3 keys, refs, events в React'}>
         <div className='component row'>
           <input type='text' ref={textInput} className='flex-grow' onKeyDown={handleInputKeyDown} />
           <Button title={'сфокусироваться'} cb={() => textInput.current.focus()} />
         </div>
         <List data={listData} cb={handleListValueChange} />
+      </Task>
+
+      <Task title={'#4 context в React'} >
+        <ThemeSwitcher switchTheme={theme.handleSwitchTheme} theme={theme.theme}/>
       </Task>
     </div>
   );

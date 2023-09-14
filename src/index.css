@@ -20,7 +20,15 @@ code {
 @layer {
 
   .App {
-    @apply flex flex-row flex-wrap justify-center items-start;
+    @apply flex flex-row flex-wrap justify-center items-start min-h-screen;
+  }
+
+  .dark {
+    @apply bg-slate-800;
+  }
+
+  .dark .task {
+    @apply bg-slate-600 text-slate-100;
   }
 
   .task {
@@ -35,7 +43,7 @@ code {
     @apply flex-row justify-between items-center;
   }
 
-  span{
+  span {
     @apply mx-1
   }
 
