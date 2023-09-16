@@ -28,7 +28,18 @@ code {
   }
 
   .dark .task {
-    @apply bg-slate-600 text-slate-100;
+    @apply bg-slate-600;
+  }
+
+  .dark p,
+  .dark span,
+  .dark h3,
+  .dark label{
+    @apply text-slate-100;
+  }
+
+  .dark input[type='text'] {
+    color: black;
   }
 
   .task {

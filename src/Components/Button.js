@@ -5,7 +5,7 @@ export const Button = ({ title, cb, color = '#00c800', datavalue }) => {
     const theme = useContext(Theme);
     const buttonColor = theme.theme === 'light' ? color : '#3283a8'; // для темной темы
     return (
-        <button className={`rounded px-5 mx-1 break-words bg-opacity-20 border-2`}
+        <button className={`rounded px-5 mx-1 break-words bg-opacity-20 border-2 ${theme.theme === 'dark' && 'text-slate-100'}`}
             style={
                 {
                     border: `2px solid ${buttonColor}`,

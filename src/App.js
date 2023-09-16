@@ -23,7 +23,7 @@ function App() {
   }
   const handleInputKeyDown = (e) => {
     const value = e.target.value.trim();
-    if (value && e.code === 'Enter') {
+    if (value && (e.code === 'Enter' ||  e.key === 'Enter')) {
       setListData(prev => [...prev, value])
       e.target.value = '';
     }
@@ -53,7 +53,7 @@ function App() {
       </Task>
 
       <Task title={'#4 context в React'} >
-        <ThemeSwitcher switchTheme={theme.handleSwitchTheme} theme={theme.theme}/>
+        <ThemeSwitcher switchTheme={theme.handleSwitchTheme} theme={theme.theme} />
       </Task>
     </div>
   );
